@@ -183,7 +183,6 @@ main .trending-section .trending-container .cards .card {
   gap: 10px;
   width: 180px;
   padding: 1rem;
-  border: 1px solid #ddd;
   border-radius: 8px;
   text-align: left;
   text-decoration: none;
@@ -218,7 +217,7 @@ main .trending-section .swiper .swiper-button-next::after, main .trending-sectio
 main .trending-section .swiper .swiper-button-next, main .trending-section .swiper .swiper-button-prev {
   top: -1.875rem;
   background-color: wheat;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   width: 30px;
   height: 30px;
   border-radius: 50%;
