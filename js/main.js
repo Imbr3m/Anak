@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var swiperCategories = new Swiper(".categories__container", {
+    var swiperCategories = new Swiper(".trending-container", {
       spaceBetween: 24,
       loop: true,
       

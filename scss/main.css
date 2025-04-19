@@ -157,18 +157,57 @@ main .featured-category-section .cards .card img {
 }
 main .trending-section {
   width: 95%;
-  min-height: 300px;
-  background-color: red;
+  background-color: #fff;
+  padding-block: 2rem;
   overflow: hidden;
 }
-main .trending-section .section-title {
+main .trending-section .trending-title {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
+  margin-top: 0;
 }
-main .trending-section .categories__container .swiper-wrapper .category__item {
-  text-align: center;
-  border: solid 2px black;
-  padding: 0.625rem 0.625rem 1.25rem;
+main .trending-section .trending-title span {
+  color: #e91e63;
+}
+main .trending-section .trending-container {
+  height: auto;
+}
+main .trending-section .trending-container .cards {
+  display: flex;
+  gap: 1rem;
+}
+main .trending-section .trending-container .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 180px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+main .trending-section .trending-container .cards .card img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .trending-section .trending-container .cards .card .category__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+main .trending-section .trending-container .cards .card .price {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
 }
 main .trending-section .swiper {
   overflow: initial;
