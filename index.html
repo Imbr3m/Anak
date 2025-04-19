@@ -7,6 +7,8 @@
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="scss/main.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <!-- NAV BAR -->
@@ -90,14 +92,72 @@
         </section>
 
         <!-- TOP TREDNING SECTION -->
-        <section class="trending-section">
+        <section class="trending-section section">
+            <h3 class="section-title">Top <span>Trending</span></h3>
 
+            <div class="categories__container swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(1).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(2).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(3).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(4).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(5).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(1).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(1).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+                    <a href="" class="category__item swiper-slide">
+                        <img src="assets/imgs/featured-category-img(1).png" alt="" class="category__img">
+
+                        <h3 class="category__title">T-shirt</h3>
+                    </a>
+
+                </div>
+
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </div>
+            </div>
         </section>
+
         <section></section>
 
     </main>
 
     <footer></footer>
 
+    <!---------- JS SCRIPTS ---------->
+    <script src="js/main.js"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

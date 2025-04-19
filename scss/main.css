@@ -156,7 +156,43 @@ main .featured-category-section .cards .card img {
   height: auto;
 }
 main .trending-section {
-  width: 100%;
-  height: 400px;
+  width: 95%;
+  min-height: 300px;
   background-color: red;
+  overflow: hidden;
+}
+main .trending-section .section-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+main .trending-section .categories__container .swiper-wrapper .category__item {
+  text-align: center;
+  border: solid 2px black;
+  padding: 0.625rem 0.625rem 1.25rem;
+}
+main .trending-section .swiper {
+  overflow: initial;
+}
+main .trending-section .swiper .swiper-button-next::after, main .trending-section .swiper .swiper-button-prev::after {
+  content: "";
+}
+main .trending-section .swiper .swiper-button-next, main .trending-section .swiper .swiper-button-prev {
+  top: -1.875rem;
+  background-color: wheat;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+main .trending-section .swiper .swiper-button-next svg, main .trending-section .swiper .swiper-button-prev svg {
+  width: 100%;
+  height: 100%;
+  stroke: black;
+}
+main .trending-section .swiper .swiper-button-prev {
+  left: initial;
+  right: 2.5rem;
+}
+main .trending-section .swiper .swiper-button-next {
+  right: 0;
 }/*# sourceMappingURL=main.css.map */
