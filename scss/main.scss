@@ -107,12 +107,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+
+    gap: 30px; //gap between sections
 
     width: 100%;
     height: 1000vh;
 
-    background-color: wheat;
+    background-color: white; //will change color with gsap
 
     // LANDING SECTION
     .landing-section {
@@ -164,9 +165,54 @@ main {
         }
     }
 
-    .test {
-        height: 100vh;
+    // FEATURED CATEGORY SECTION
+    .featured-category-section {
+        min-height: 250px;
+        width: 95%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        
+
+
+        p {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .cards {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            .card {
+                width: 100%;
+                height: 100%;
+
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .trending-section {
         width: 100%;
+        height: 400px;
+
         background-color: red;
     }
 }
