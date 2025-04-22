@@ -158,7 +158,7 @@ main .featured-category-section .cards .card img {
 main .trending-section {
   width: 95%;
   background-color: #fff;
-  padding-block: 2rem;
+  padding-block: 1rem;
   overflow: hidden;
 }
 main .trending-section .trending-title {
@@ -233,4 +233,18 @@ main .trending-section .swiper .swiper-button-prev {
 }
 main .trending-section .swiper .swiper-button-next {
   right: 0;
+}
+main .banner {
+  width: 95%;
+  height: 300px;
+  background-color: wheat;
+}
+main .spring-selction-section {
+  height: 300vh;
+  width: 100%;
+  margin-top: 100px;
+  background-color: wheat;
+  background: url("bg-imgs/Spring selection elephants.png");
+  background-position: left;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */

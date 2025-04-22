@@ -213,7 +213,7 @@ main {
     .trending-section {
         width: 95%;
         background-color: #fff;
-        padding-block: 2rem;
+        padding-block: 1rem;
         overflow: hidden;
 
         .trending-title {
@@ -307,5 +307,25 @@ main {
                 right: 0;
             }
         }
+    }
+
+    //BANNER SECTION
+    .banner {
+        width: 95%;
+        height: 300px;
+        background-color: wheat;
+    }
+
+    //SPRING SELECTION SECTION
+    .spring-selction-section {
+        height: 300vh;
+        width: 100%;
+
+        margin-top: 100px;
+
+        background-color: wheat;
+        background: url('bg-imgs/Spring\ selection\ elephants.png');
+        background-position: left;
+        background-size: cover;
     }
 }
