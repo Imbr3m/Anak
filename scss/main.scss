@@ -14,7 +14,7 @@ html, body {
 
 // NAV BAR
 header {
-    margin-top: 20px;
+    margin-top: 20;
 
     position: fixed;
     top: 0;
@@ -328,4 +328,103 @@ main {
         background-position: left;
         background-size: cover;
     }
+
+    //REVIEWS SECTION
+    .reviews-section {
+        background: #fff;
+        padding: 2rem;
+      
+        .title-header {
+          font-size: 2rem;
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      
+        .review-cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          justify-content: center;
+      
+          .review-card {
+            background-color: #ffe6ee;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+      
+            .review-count {
+              background-color: #fbb6c2;
+              color: #000;
+              font-size: 0.9rem;
+              padding: 0.3rem 0.8rem;
+              border-radius: 999px;
+              align-self: flex-start;
+              font-weight: 500;
+            }
+      
+            .review-text {
+              font-size: 1rem;
+              color: #333;
+            }
+      
+            .read-more {
+              background-color: #fbb6c2;
+              border: none;
+              border-radius: 999px;
+              padding: 0.4rem 1rem;
+              font-size: 0.9rem;
+              color: #000;
+              align-self: flex-start;
+              cursor: pointer;
+            }
+      
+            hr {
+              border: none;
+              height: 1px;
+              background: #ccc;
+              margin: 0.5rem 0;
+            }
+      
+            .reviewer {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+      
+              .reviewer-logo {
+                background-color: #ea4c89;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+              }
+      
+              .reviewer-info {
+                .reviewer-name {
+                  font-weight: 600;
+                  margin: 0;
+                }
+                .reviewer-role {
+                  font-size: 0.85rem;
+                  color: #555;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+    }
+      
+
+
+
 }
