@@ -1,12 +1,12 @@
-
-
-
+// imports
+@import "variables";
 
 
 
 // resets
 html, body {
     margin: 0;
+    font-family: $font-main;
 }
 
 
