@@ -14,7 +14,7 @@ html, body {
 
 // NAV BAR
 header {
-    margin-top: 20;
+    margin-top: 20px;
 
     position: fixed;
     top: 0;
@@ -311,9 +311,47 @@ main {
 
     //BANNER SECTION
     .banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        height: 400px; 
         width: 95%;
-        height: 300px;
-        background-color: wheat;
+      
+        .box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+          text-transform: uppercase;
+        }
+      
+        .box-1 {
+          grid-row: 1 / span 2;
+          grid-column: 1 / 2;
+          background-color: #555;
+        }
+      
+        .pic-2 {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+          background-color: #777;
+        }
+      
+        .pic-3 {
+          grid-row: 1 / 2;
+          grid-column: 3 / 4;
+          background-color: #999;
+        }
+      
+        .pic-4 {
+          grid-row: 2 / 3;
+          grid-column: 2 / span 2;
+          background-color: #bbb;
+        }
+
     }
 
     //SPRING SELECTION SECTION
