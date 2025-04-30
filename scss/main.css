@@ -236,15 +236,24 @@ main .trending-section .swiper .swiper-button-prev {
 main .trending-section .swiper .swiper-button-next {
   right: 0;
 }
-main .banner {
+main .banner-section {
+  height: 400px;
+  width: 95%;
+}
+main .banner-section .banner-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+main .banner-section .banner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0;
-  height: 400px;
-  width: 95%;
+  width: 100%;
+  height: 100%;
 }
-main .banner .box {
+main .banner-section .banner .box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,27 +262,27 @@ main .banner .box {
   color: white;
   text-transform: uppercase;
 }
-main .banner .pic-1 {
+main .banner-section .banner .pic-1 {
   grid-row: 1/span 2;
   grid-column: 1/2;
   background-color: #555;
 }
-main .banner .pic-2 {
+main .banner-section .banner .pic-2 {
   grid-row: 1/2;
   grid-column: 2/3;
   background-color: #777;
 }
-main .banner .pic-3 {
+main .banner-section .banner .pic-3 {
   grid-row: 1/2;
   grid-column: 3/4;
   background-color: #999;
 }
-main .banner .pic-4 {
+main .banner-section .banner .pic-4 {
   grid-row: 2/3;
   grid-column: 2/span 2;
   background-color: #bbb;
 }
-main .banner .pic-4 .inner-box {
+main .banner-section .banner .pic-4 .inner-box {
   flex: 1;
   background-color: #ddd;
   color: #000;
