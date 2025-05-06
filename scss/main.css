@@ -1,48 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spartan:wght@400;500;600;700&display=swap");
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 4rem;
-  /*========== Colors ==========*/
-  /* Color mode HSL(hue, saturation, lightness) */
-  --first-color: hsl(176, 88%, 27%);
-  --first-color-alt: hsl(129, 44%, 94%);
-  --second-color: hsl(34, 94%, 87%);
-  --title-color: hsl(0, 0%, 13%);
-  --text-color: hsl(154, 13%, 32%);
-  --text-color-light: hsl(60, 1%, 56%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 93%);
-  --border-color: hsl(129, 36%, 85%);
-  --border-color-alt: hsl(113, 15%, 90%);
-  /*========== Font and typography ==========*/
-  /* .5rem = 8px | 1rem = 16px ... */
-  --body-font: "Lato", sans-serif;
-  --second-font: "Spartan", sans-serif;
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.75rem;
-  --h2-font-size: 2rem;
-  --h3-font-size: 1.75rem;
-  --h4-font-size: 1.375rem;
-  --large-font-size: 1.125rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.75rem;
-  --tiny-font-size: 0.6875rem;
-  /*========== Font weight ==========*/
-  --weight-400: 400;
-  --weight-500: 500;
-  --weight-600: 600;
-  --weight-700: 700;
-  /*========== Transition ==========*/
-  --transition: cubic-bezier(0, 0, 0.05, 1);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", cursive;
 }
 
 svg {
@@ -70,30 +32,30 @@ svg {
 }
 
 .section__title {
-  font-size: var(--h4-font-size);
+  font-size: 1.375rem;
   margin-bottom: 1.5rem;
 }
 
 .section__title span {
-  color: var(--first-color);
+  color: hsl(176, 88%, 27%);
 }
 
 .form__input {
-  border: 1px solid var(--border-color-alt);
+  border: 1px solid hsl(113, 15%, 90%);
   padding-inline: 1rem;
   height: 45px;
   border-radius: 0.25rem;
-  font-size: var(--small-font-size);
+  font-size: 0.875rem;
 }
 
 .new__price {
-  color: var(--first-color);
-  font-weight: var(--weight-600);
+  color: hsl(176, 88%, 27%);
+  font-weight: 600;
 }
 
 .old__price {
-  color: var(--text-color-light);
-  font-size: var(--small-font-size);
+  color: hsl(60, 1%, 56%);
+  font-size: 0.875rem;
   text-decoration: line-through;
 }
 
@@ -225,6 +187,7 @@ main .landing-section .landing-content .landing-text {
   flex: 1;
   justify-content: center;
   align-items: end;
+  gap: 15px;
 }
 main .landing-section .landing-content .landing-text p {
   color: white;
@@ -330,12 +293,13 @@ main .trending-section .swiper .swiper-button-next::after, main .trending-sectio
   content: "";
 }
 main .trending-section .swiper .swiper-button-next, main .trending-section .swiper .swiper-button-prev {
-  top: -1.875rem;
+  top: -0.7rem;
   background-color: wheat;
   border: 1px solid whitesmoke;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  font-size: --tiny-font-size;
 }
 main .trending-section .swiper .swiper-button-next svg, main .trending-section .swiper .swiper-button-prev svg {
   width: 100%;
@@ -418,22 +382,22 @@ main .tab__btns {
   margin-bottom: 2rem;
 }
 main .tab__btn {
-  background-color: var(--container-color);
-  color: var(--title-color);
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 13%);
   padding: 1rem 1.25rem 0.875rem;
   border-radius: 0.25rem;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-600);
+  font-family: "Poppins", cursive;
+  font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
 }
 main .products__container {
   grid-template-columns: repeat(4, 1fr);
 }
 main .product__item {
-  border: 1px solid var(--border-color);
+  border: 1px solid hsl(129, 36%, 85%);
   border-radius: 1.5rem;
-  transition: all 0.2s var(--transition);
+  transition: all 0.2s cubic-bezier(0, 0, 0.05, 1);
 }
 main .product__banner {
   padding: 0.625rem 0.75rem 0.75rem;
@@ -449,7 +413,7 @@ main .product__images {
 }
 main .product__img {
   vertical-align: middle;
-  transition: all 1.5s var(--transition);
+  transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
 }
 main .product__item:hover .product__img {
   transform: scale(1.1);
@@ -467,7 +431,7 @@ main .product__actions {
   display: flex;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-  transition: all 0.2s var(--transition);
+  transition: all 0.2s cubic-bezier(0, 0, 0.05, 1);
 }
 main .action__btn {
   width: 40px;
@@ -475,10 +439,10 @@ main .action__btn {
   line-height: 42px;
   text-align: center;
   border-radius: 50%;
-  background-color: var(--first-color-alt);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  font-size: var(--small-font-size);
+  background-color: hsl(129, 44%, 94%);
+  border: 1px solid hsl(129, 36%, 85%);
+  color: hsl(154, 13%, 32%);
+  font-size: 0.875rem;
   position: relative;
 }
 main .action__btn::before,
@@ -492,14 +456,14 @@ main .action__btn::before {
   content: "";
   top: -2px;
   border: 0.5rem solid transparent;
-  border-top-color: var(--first-color);
+  border-top-color: hsl(176, 88%, 27%);
 }
 main .action__btn::after {
   content: attr(aria-label);
   bottom: 100%;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  font-size: var(--tiny-font-size);
+  background-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6875rem;
   white-space: nowrap;
   padding-inline: 0.625rem;
   border-radius: 0.25rem;
@@ -509,11 +473,11 @@ main .product__badge {
   position: absolute;
   left: 1.25rem;
   top: 1.25rem;
-  background-color: var(--first-color);
-  color: var(--body-color);
+  background-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
   padding: 0.25rem 0.625rem;
   border-radius: 2.5rem;
-  font-size: var(--tiny-font-size);
+  font-size: 0.6875rem;
 }
 main .product__badge.light-pink {
   background-color: hsl(341, 100%, 73%);
@@ -532,20 +496,20 @@ main .product__content {
   position: relative;
 }
 main .product__category {
-  color: var(--text-color-light);
-  font-size: var(--smaller-font-size);
+  color: hsl(60, 1%, 56%);
+  font-size: 0.75rem;
 }
 main .product__title {
-  font-size: var(--normal-font-size);
+  font-size: 1rem;
   margin-block: 0.75rem 0.5rem;
 }
 main .product__rating {
   color: hsl(42, 100%, 50%);
-  font-size: var(--smaller-font-size);
+  font-size: 0.75rem;
   margin-bottom: 0.75rem;
 }
 main .product__price .new__price {
-  font-size: var(--large-font-size);
+  font-size: 1.125rem;
 }
 main .cart__btn {
   position: absolute;
@@ -553,8 +517,8 @@ main .cart__btn {
   right: 1.25rem;
 }
 main .tab__btn.active-tab {
-  color: var(--first-color);
-  background-color: var(--second-color);
+  color: hsl(176, 88%, 27%);
+  background-color: hsl(34, 94%, 87%);
 }
 main .tab__item:not(.active-tab) {
   display: none;
@@ -580,9 +544,9 @@ main .action__btn:hover::after {
   transform: translateX(-50%) translateY(-0.5rem);
 }
 main .action__btn:hover {
-  background-color: var(--first-color);
-  border-color: var(--first-color);
-  color: var(--body-color);
+  background-color: hsl(176, 88%, 27%);
+  border-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
 }
 main .reviews-section {
   background: #fff;
