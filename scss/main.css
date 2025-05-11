@@ -156,8 +156,6 @@ main {
   gap: 30px;
   width: 100%;
   background-color: white;
-  /* Active Tab */
-  /* Product Hover */
 }
 main .landing-section {
   width: 95%;
@@ -375,13 +373,16 @@ main .spring-selction-section {
   background-position: left;
   background-size: cover;
 }
-main .tab__btns {
+main .products-section {
+  width: 95%;
+}
+main .products-section .tab__btns {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2rem;
 }
-main .tab__btn {
+main .products-section .tab__btns .tab__btn {
   background-color: hsl(0, 0%, 93%);
   color: hsl(0, 0%, 13%);
   padding: 1rem 1.25rem 0.875rem;
@@ -391,39 +392,57 @@ main .tab__btn {
   font-weight: 600;
   cursor: pointer;
 }
-main .products__container {
-  grid-template-columns: repeat(4, 1fr);
+main .products-section .tab__btns .tab__btn.active-tab {
+  color: hsl(176, 88%, 27%);
+  background-color: hsl(34, 94%, 87%);
 }
-main .product__item {
+main .products-section .tab__items .tab__item:not(.active-tab) {
+  display: none;
+}
+main .products-section .tab__items .tab__item .products__container {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: 1.5rem;
+}
+main .products-section .product__item {
   border: 1px solid hsl(129, 36%, 85%);
   border-radius: 1.5rem;
   transition: all 0.2s cubic-bezier(0, 0, 0.05, 1);
 }
-main .product__banner {
-  padding: 0.625rem 0.75rem 0.75rem;
+main .products-section .product__item:hover {
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
 }
-main .product__banner,
-main .product__images {
+main .products-section .product__item .product__banner {
+  padding: 0.625rem 0.75rem 0.75rem;
   position: relative;
 }
-main .product__images {
+main .products-section .product__item .product__banner .product__images {
   display: block;
   overflow: hidden;
   border-radius: 1.25rem;
+  position: relative;
 }
-main .product__img {
+main .products-section .product__item .product__banner .product__images .product__img {
   vertical-align: middle;
   transition: all 1.5s cubic-bezier(0, 0, 0.05, 1);
 }
-main .product__item:hover .product__img {
-  transform: scale(1.1);
-}
-main .product__img.hover {
+main .products-section .product__item .product__banner .product__images .product__img.hover {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
-main .product__actions {
+main .products-section .product__item .product__banner:hover .product__img.default {
+  opacity: 0;
+}
+main .products-section .product__item .product__banner:hover .product__img.hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+main .products-section .product__item .product__banner:hover .product__actions {
+  opacity: 1;
+}
+main .products-section .product__item .product__banner .product__actions {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -432,8 +451,9 @@ main .product__actions {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   transition: all 0.2s cubic-bezier(0, 0, 0.05, 1);
+  opacity: 0;
 }
-main .action__btn {
+main .products-section .product__item .product__banner .product__actions .action__btn {
   width: 40px;
   height: 40px;
   line-height: 42px;
@@ -445,20 +465,20 @@ main .action__btn {
   font-size: 0.875rem;
   position: relative;
 }
-main .action__btn::before,
-main .action__btn::after {
+main .products-section .product__item .product__banner .product__actions .action__btn::before, main .products-section .product__item .product__banner .product__actions .action__btn::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  opacity: 0;
 }
-main .action__btn::before {
+main .products-section .product__item .product__banner .product__actions .action__btn::before {
   content: "";
   top: -2px;
   border: 0.5rem solid transparent;
   border-top-color: hsl(176, 88%, 27%);
 }
-main .action__btn::after {
+main .products-section .product__item .product__banner .product__actions .action__btn::after {
   content: attr(aria-label);
   bottom: 100%;
   background-color: hsl(176, 88%, 27%);
@@ -469,7 +489,16 @@ main .action__btn::after {
   border-radius: 0.25rem;
   line-height: 2.58;
 }
-main .product__badge {
+main .products-section .product__item .product__banner .product__actions .action__btn:hover {
+  background-color: hsl(176, 88%, 27%);
+  border-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+main .products-section .product__item .product__banner .product__actions .action__btn:hover::before, main .products-section .product__item .product__banner .product__actions .action__btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+main .products-section .product__item .product__banner .product__badge {
   position: absolute;
   left: 1.25rem;
   top: 1.25rem;
@@ -479,71 +508,58 @@ main .product__badge {
   border-radius: 2.5rem;
   font-size: 0.6875rem;
 }
-main .product__badge.light-pink {
+main .products-section .product__item .product__banner .product__badge.light-pink {
   background-color: hsl(341, 100%, 73%);
 }
-main .product__badge.light-green {
+main .products-section .product__item .product__banner .product__badge.light-green {
   background-color: hsl(155, 20%, 67%);
 }
-main .product__badge.light-orange {
+main .products-section .product__item .product__banner .product__badge.light-orange {
   background-color: hsl(24, 100%, 73%);
 }
-main .product__badge.light-blue {
+main .products-section .product__item .product__banner .product__badge.light-blue {
   background-color: hsl(202, 53%, 76%);
 }
-main .product__content {
+main .products-section .product__item .product__content {
   padding: 0 1.25rem 1.125rem;
   position: relative;
 }
-main .product__category {
+main .products-section .product__item .product__content .product__category {
   color: hsl(60, 1%, 56%);
   font-size: 0.75rem;
 }
-main .product__title {
+main .products-section .product__item .product__content .product__title {
   font-size: 1rem;
   margin-block: 0.75rem 0.5rem;
 }
-main .product__rating {
+main .products-section .product__item .product__content .product__rating {
   color: hsl(42, 100%, 50%);
   font-size: 0.75rem;
   margin-bottom: 0.75rem;
 }
-main .product__price .new__price {
+main .products-section .product__item .product__content .product__price {
+  display: flex;
+  gap: 0.5rem;
+}
+main .products-section .product__item .product__content .product__price .new__price {
   font-size: 1.125rem;
 }
-main .cart__btn {
+main .products-section .product__item .product__content .cart__btn {
   position: absolute;
   bottom: 1.6rem;
   right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: hsl(129, 44%, 94%);
+  border: 1px solid hsl(129, 36%, 85%);
+  color: hsl(154, 13%, 32%);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
 }
-main .tab__btn.active-tab {
-  color: hsl(176, 88%, 27%);
-  background-color: hsl(34, 94%, 87%);
-}
-main .tab__item:not(.active-tab) {
-  display: none;
-}
-main .product__img.hover,
-main .product__actions,
-main .action__btn::before,
-main .action__btn::after,
-main .product__item:hover .product__img.default {
-  opacity: 0;
-}
-main .product__item:hover {
-  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
-}
-main .product__item:hover .product__img.hover,
-main .product__item:hover .product__actions,
-main .action__btn:hover::before,
-main .action__btn:hover::after {
-  opacity: 1;
-}
-main .action__btn:hover::before,
-main .action__btn:hover::after {
-  transform: translateX(-50%) translateY(-0.5rem);
-}
-main .action__btn:hover {
+main .products-section .product__item .product__content .cart__btn:hover {
   background-color: hsl(176, 88%, 27%);
   border-color: hsl(176, 88%, 27%);
   color: hsl(0, 0%, 100%);
