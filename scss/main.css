@@ -568,6 +568,7 @@ main .reviews-section {
   background: #fff;
   padding: 2rem;
   overflow: hidden;
+  width: 95%;
 }
 main .reviews-section .title-header {
   font-size: 2rem;
@@ -584,7 +585,7 @@ main .reviews-section .reviews-carousel {
 main .reviews-section .reviews-carousel:before, main .reviews-section .reviews-carousel:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 50px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -667,7 +668,7 @@ main .reviews-section .review-card .reviewer .reviewer-info .reviewer-role {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 main .reviews-section .review-promise {
