@@ -49,3 +49,14 @@ tabs.forEach((tab) => {
 
 
 
+// review
+const carousel = document.querySelector(".reviews-carousel");
+    const slide = document.querySelector(".reviews-slide");
+    
+    // Clone 3 times (original + 2 copies)
+    for (let i = 0; i < 2; i++) {
+        const copy = slide.cloneNode(true);
+        carousel.appendChild(copy);
+    }
+
+

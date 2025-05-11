@@ -567,6 +567,7 @@ main .products-section .product__item .product__content .cart__btn:hover {
 main .reviews-section {
   background: #fff;
   padding: 2rem;
+  overflow: hidden;
 }
 main .reviews-section .title-header {
   font-size: 2rem;
@@ -574,59 +575,75 @@ main .reviews-section .title-header {
   text-align: center;
   margin-bottom: 2rem;
 }
-main .reviews-section .review-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
+main .reviews-section .reviews-carousel {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  white-space: nowrap;
 }
-main .reviews-section .review-cards .review-card {
-  background-color: #ffe6ee;
+main .reviews-section .reviews-carousel:before, main .reviews-section .reviews-carousel:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+main .reviews-section .reviews-carousel:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+main .reviews-section .reviews-carousel:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+main .reviews-section .reviews-carousel:hover .reviews-slide {
+  animation-play-state: paused;
+}
+main .reviews-section .reviews-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: 35s slide infinite linear;
+}
+main .reviews-section .review-card {
+  background-color: rgb(244, 225, 190);
   border-radius: 1rem;
   padding: 1.5rem;
   width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  white-space: normal;
 }
-main .reviews-section .review-cards .review-card .review-count {
-  background-color: #fbb6c2;
+main .reviews-section .review-card .review-count {
+  background-color: rgb(255, 242, 217);
   color: #000;
   font-size: 0.9rem;
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
-  align-self: flex-start;
   font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
-main .reviews-section .review-cards .review-card .review-text {
+main .reviews-section .review-card .review-text {
   font-size: 1rem;
   color: #333;
+  margin-bottom: 1rem;
 }
-main .reviews-section .review-cards .review-card .read-more {
-  background-color: #fbb6c2;
-  border: none;
-  border-radius: 999px;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
-  color: #000;
-  align-self: flex-start;
-  cursor: pointer;
-}
-main .reviews-section .review-cards .review-card hr {
+main .reviews-section .review-card hr {
   border: none;
   height: 1px;
-  background: #ccc;
+  background: rgb(173, 143, 104);
   margin: 0.5rem 0;
 }
-main .reviews-section .review-cards .review-card .reviewer {
+main .reviews-section .review-card .reviewer {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-main .reviews-section .review-cards .review-card .reviewer .reviewer-logo {
-  background-color: #ea4c89;
-  color: #fff;
+main .reviews-section .review-card .reviewer .reviewer-logo {
+  background-color: whitesmoke;
+  color: black;
   font-weight: bold;
   border-radius: 50%;
   width: 40px;
@@ -636,14 +653,22 @@ main .reviews-section .review-cards .review-card .reviewer .reviewer-logo {
   align-items: center;
   font-size: 1.2rem;
 }
-main .reviews-section .review-cards .review-card .reviewer .reviewer-info .reviewer-name {
+main .reviews-section .review-card .reviewer .reviewer-info .reviewer-name {
   font-weight: 600;
   margin: 0;
 }
-main .reviews-section .review-cards .review-card .reviewer .reviewer-info .reviewer-role {
+main .reviews-section .review-card .reviewer .reviewer-info .reviewer-role {
   font-size: 0.85rem;
   color: #555;
   margin: 0;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 main .reviews-section .review-promise {
   display: flex;
@@ -652,6 +677,7 @@ main .reviews-section .review-promise {
   width: 95%;
   height: 400px;
   gap: 2rem;
+  margin-top: 2rem;
 }
 main .reviews-section .review-promise .img-container {
   width: auto;
@@ -659,6 +685,8 @@ main .reviews-section .review-promise .img-container {
 }
 main .reviews-section .review-promise .img-container img {
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .reviews-section .review-promise .text-container {
   padding: 1rem;
