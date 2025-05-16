@@ -13,7 +13,6 @@ svg {
 }
 
 .container {
-  max-width: 1320px;
   margin-inline: auto;
   padding-inline: 0.75rem;
 }
@@ -76,6 +75,14 @@ svg {
 
 img {
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -156,6 +163,7 @@ main {
   gap: 30px;
   width: 100%;
   background-color: white;
+  /*=============== NEWSLETTER ===============*/
 }
 main .landing-section {
   width: 95%;
@@ -297,7 +305,7 @@ main .trending-section .swiper .swiper-button-next, main .trending-section .swip
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  font-size: --tiny-font-size;
+  font-size: 0.6875rem;
 }
 main .trending-section .swiper .swiper-button-next svg, main .trending-section .swiper .swiper-button-prev svg {
   width: 100%;
@@ -568,6 +576,10 @@ main .reviews-section {
   background: #fff;
   padding: 2rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 95%;
 }
 main .reviews-section .title-header {
@@ -675,8 +687,8 @@ main .reviews-section .review-promise {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95%;
-  height: 400px;
+  width: 100%;
+  height: 550px;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -699,4 +711,129 @@ main .reviews-section .review-promise .text-container h3 {
 main .reviews-section .review-promise .text-container p {
   font-size: 1rem;
   line-height: 1.5;
+}
+main .newsletter {
+  background-color: wheat;
+  width: 100%;
+}
+main .newsletter.home__newsletter {
+  margin-top: 2rem;
+}
+main .newsletter__container {
+  grid-template-columns: repeat(2, 3.5fr) 5fr;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+main .newsletter__title {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .newsletter__icon {
+  width: 40px;
+}
+main .newsletter__description {
+  color: hsl(0, 0%, 13%);
+  font-family: "Poppins", cursive;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+main .newsletter__form {
+  display: flex;
+}
+main .newsletter__input, main .newsletter__btn {
+  font-size: 0.875rem;
+}
+main .newsletter__input {
+  background-color: hsl(0, 0%, 100%);
+  padding-inline: 1.25rem;
+  width: 100%;
+  height: 48px;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+main .newsletter__btn {
+  background-color: hsl(0, 0%, 13%);
+  color: hsl(0, 0%, 100%);
+  padding-inline: 2rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-family: "Poppins", cursive;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0, 0, 0.05, 1);
+}
+main .newsletter__btn:hover {
+  background-color: hsl(176, 88%, 27%);
+}
+
+/*=============== FOOTER ===============*/
+.footer__container {
+  grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
+  padding-block: 2.5rem;
+  width: 95%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer__container .footer__logo-img {
+  width: 120px;
+}
+.footer__content .footer__subtitle {
+  color: hsl(60, 1%, 56%);
+  font-size: 0.875rem;
+  margin-block: 1.25rem 0.625rem;
+}
+.footer__content .footer__description {
+  margin-bottom: 0.25rem;
+}
+.footer__content .footer__description span {
+  font-weight: 600;
+}
+.footer__social .footer__subtitle {
+  margin-top: 1.875rem;
+}
+.footer__social-links {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+  list-style: none;
+}
+.footer__social .footer__social-icon {
+  width: 20px;
+  opacity: 0.7;
+}
+.footer__title {
+  font-size: 1.125rem;
+  margin-block: 1rem 1.25rem;
+}
+.footer__link {
+  color: hsl(0, 0%, 13%);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: block;
+  transition: all 0.3s cubic-bezier(0, 0, 0.05, 1);
+  list-style: none;
+}
+.footer__link:hover {
+  color: hsl(176, 88%, 27%);
+  margin-left: 0.25rem;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  border-top: 1px solid hsl(113, 15%, 90%);
+}
+.footer__bottom .copyright,
+.footer__bottom .designer {
+  color: hsl(60, 1%, 56%);
+  font-size: 0.875rem;
+}
+
+/*=============== NEW ARRIVALS ===============*/
+.new__arrivals {
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
