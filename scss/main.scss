@@ -479,6 +479,7 @@ main {
             border: 1px solid $border-color;
             border-radius: 1.5rem;
             transition: all 0.2s $transition;
+            background-color: white;
         
             &:hover {
               box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
@@ -670,11 +671,12 @@ main {
       .swiper {
           overflow: initial;
 
-          .swiper-button-next::after, .swiper-button-prev::after {
+          .swiper-button-next-arrivals::after, .swiper-button-prev-arrivals::after {
               content: '';
           }
-          .swiper-button-next, .swiper-button-prev {
-              top: -0.7rem;
+          .swiper-button-next-arrivals, .swiper-button-prev-arrivals {
+              top: -3.5rem;
+              position: absolute;
 
               background-color: wheat;
               border: 1px solid whitesmoke;
@@ -682,6 +684,8 @@ main {
               height: 30px;
               border-radius: 50%;
               font-size: $tiny-font-size;
+
+              
               
 
               svg {
@@ -692,11 +696,11 @@ main {
               }
           }
 
-          .swiper-button-prev {
+          .swiper-button-prev-arrivals {
               left: initial;
               right: 2.5rem;
           }
-          .swiper-button-next {
+          .swiper-button-next-arrivals {
               right: 0;
           }
       }
