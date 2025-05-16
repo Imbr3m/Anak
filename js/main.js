@@ -25,6 +25,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*=============== SWIPER PRODUCTS ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    var swiperProducts = new Swiper('.new__container', {
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next-arrivals',
+            prevEl: '.swiper-button-prev-arrivals',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+    });
+    
+    // Log to check if Swiper is initialized
+    console.log('Swiper initialized:', swiperProducts);
+});
 
 /*=============== PRODUCTS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),

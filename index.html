@@ -7,6 +7,7 @@
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="scss/main.css">
+    <!-- <link rel="stylesheet" href="scss/secondary.css"> -->
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
@@ -168,7 +169,82 @@
 
       <!-- SPRING SELECTION SECTION -->
       <section class="spring-selction-section">
+        <!-- NEW ARRIVALS SECTION -->
+        <section class="new__arrivals container section">
+          <h3 class="section__title"><span>New</span> Arrivals</h3>
 
+          <div class="new__container swiper">
+            <div class="cards swiper-wrapper">
+              <div class="product__item swiper-slide">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img
+                      src="assets/imgs/product-1-1.jpg"
+                      alt=""
+                      class="product__img default"
+                    />
+
+                    <img
+                      src="assets/imgs/product-1-2.jpg"
+                      alt=""
+                      class="product__img hover"
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Add To Wishlist">
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Clothing</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">$238.85</span>
+                    <span class="old__price">$245.8</span>
+                  </div>
+
+                  <a
+                    href="#"
+                    class="action__btn cart__btn"
+                    aria-label="Add To Cart"
+                  >
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="swiper-button-next-arrivals">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+            <div class="swiper-button-prev-arrivals">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- PRODUCTS SECTION -->
