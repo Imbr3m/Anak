@@ -85,6 +85,49 @@ a {
   text-decoration: none;
 }
 
+/*=============== BUTTONS ===============*/
+.btn {
+  display: inline-block;
+  background-color: var(--first-color);
+  border: 2px solid var(--first-color);
+  color: var(--body-color);
+  padding-inline: 1.75rem;
+  height: 49px;
+  line-height: 49px;
+  border-radius: 0.25rem;
+  font-family: var(--second-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-700);
+  transition: all 0.4s var(--transition);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.btn--md,
+.btn--sm {
+  font-family: var(--body-font);
+}
+
+.btn--md {
+  height: 45px;
+  line-height: 42px;
+}
+
+.btn--sm {
+  height: 40px;
+  line-height: 36px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 header {
   margin-top: 20px;
   position: fixed;
@@ -1040,4 +1083,107 @@ main .newsletter__btn:hover {
 .footer__bottom .designer {
   color: hsl(60, 1%, 56%);
   font-size: 0.875rem;
+}
+
+/*=============== DEALS ===============*/
+.deals-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deals__container {
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+}
+
+.deals__item:nth-child(1) {
+  background-image: url(bg-imgs/deals-1.jpg);
+}
+
+.deals__item:nth-child(2) {
+  background-image: url(bg-imgs/deals-2.png);
+}
+
+.deals__item {
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.deals__brand {
+  color: hsl(176, 88%, 27%);
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.deals__category {
+  font-size: 0.875rem;
+}
+
+.deals__title {
+  max-width: 240px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.deals__price .new__price,
+.deals__price .old__price {
+  font-size: 1.125rem;
+}
+
+.deals__price .new__price {
+  color: hsl(352, 100%, 60%);
+}
+
+.deals__countdown-text {
+  margin-bottom: 0.25rem;
+}
+
+.countdown {
+  display: flex;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.countdown__amount {
+  position: relative;
+}
+
+.countdown__amount::after {
+  content: ":";
+  color: hsl(0, 0%, 13%);
+  font-size: 1.125rem;
+  position: absolute;
+  right: -25%;
+  top: 20%;
+}
+
+.countdown__period {
+  background-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
+  width: 60px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.unit {
+  font-size: 0.875rem;
+  text-align: center;
+  display: block;
+}
+
+.deals__btn .btn {
+  background-color: transparent;
+  color: hsl(176, 88%, 27%);
+  border: solid 2px;
 }/*# sourceMappingURL=main.css.map */
