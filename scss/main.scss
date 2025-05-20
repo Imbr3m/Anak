@@ -118,7 +118,48 @@ a {
 
 
 
+// PRE LOADER
+.pre-loader {
+  z-index: 1000;
 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+
+  .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
+      font-family: Arial, Helvetica, sans-serif;
+
+      span {
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
+          color: rgb(130, 6, 6);
+
+          margin: 1em;
+      }
+
+      .text {
+          margin-bottom: 1em;
+          color: brown;
+      }
+
+      .loader {
+          width: 450px;
+          height: 2px;
+          background: rgb(130, 6, 6);;
+      }
+  }
+}
 
 
 
@@ -130,7 +171,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 50;
     height: auto;
 
     display: flex;

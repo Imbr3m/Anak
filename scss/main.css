@@ -122,13 +122,49 @@ a {
        column-gap: 0.5rem;
 }
 
+.pre-loader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+}
+.pre-loader .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pre-loader .content span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: rgb(130, 6, 6);
+  margin: 1em;
+}
+.pre-loader .content .text {
+  margin-bottom: 1em;
+  color: brown;
+}
+.pre-loader .content .loader {
+  width: 450px;
+  height: 2px;
+  background: rgb(130, 6, 6);
+}
+
 header {
   margin-top: 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 50;
   height: auto;
   display: flex;
   justify-content: center;

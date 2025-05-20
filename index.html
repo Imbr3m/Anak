@@ -7,18 +7,32 @@
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="scss/main.css">
-    <!-- <link rel="stylesheet" href="scss/secondary.css"> -->
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <!--=============== FLATICON ===============-->
+    <!-- FLAT ICON -->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
     />
+    <!-- Image animator library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
-<body>
+  <body>
+
+    <!-- PRE LOADER -->
+    <div class="pre-loader">
+        <div class="content">
+            <div class="text">
+                Rainer is currently <span>loading</span> &#58;&#40;
+            </div>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+
     <!-- NAV BAR  -->
-     <!-- note to self make the nav dissapear when scroll up -->
+      <!-- note to self make the nav dissapear when scroll up -->
     <header>
         <nav class="nav container">
           <a href="index.html" class="nav__logo">
@@ -1029,7 +1043,7 @@
             <span class="tab__btn" data-target="#popular">Popular</span>
             <span class="tab__btn" data-target="#new-added">New added</span>
           </div>
-  
+
           <div class="tab__items">
             <div class="tab__item active-tab" content id="featured">
               <div class="products__container grid">
@@ -1041,19 +1055,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-1-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1061,13 +1075,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1084,7 +1098,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1094,7 +1108,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1103,19 +1117,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-2-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1123,13 +1137,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1146,7 +1160,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1156,7 +1170,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1165,19 +1179,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-3-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1185,13 +1199,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-orange">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1208,7 +1222,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1218,7 +1232,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1227,19 +1241,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-4-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1247,13 +1261,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-blue">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1270,7 +1284,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1280,7 +1294,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1289,19 +1303,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-5-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1309,13 +1323,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-30%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1332,7 +1346,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1342,7 +1356,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1351,19 +1365,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-6-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1371,13 +1385,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-22%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1394,7 +1408,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1404,7 +1418,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1413,19 +1427,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-7-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1433,13 +1447,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1456,7 +1470,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1466,7 +1480,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1475,19 +1489,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-8-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1495,11 +1509,11 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1516,7 +1530,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1528,7 +1542,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="tab__item" content id="popular">
               <div class="products__container grid">
                 <div class="product__item">
@@ -1539,19 +1553,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-9-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1559,13 +1573,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1582,7 +1596,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1592,7 +1606,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1601,19 +1615,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-2-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1621,13 +1635,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1644,7 +1658,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1654,7 +1668,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1663,19 +1677,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-10-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1683,13 +1697,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-orange">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1706,7 +1720,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1716,7 +1730,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1725,19 +1739,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-4-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1745,13 +1759,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-blue">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1768,7 +1782,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1778,7 +1792,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1787,19 +1801,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-5-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1807,13 +1821,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-30%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1830,7 +1844,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1840,7 +1854,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1849,19 +1863,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-11-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1869,13 +1883,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-22%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1892,7 +1906,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1902,7 +1916,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1911,19 +1925,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-7-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1931,13 +1945,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -1954,7 +1968,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -1964,7 +1978,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -1973,19 +1987,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-8-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -1993,11 +2007,11 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2014,7 +2028,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2026,7 +2040,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="tab__item" content id="new-added">
               <div class="products__container grid">
                 <div class="product__item">
@@ -2037,19 +2051,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-1-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2057,13 +2071,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2080,7 +2094,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2090,7 +2104,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2099,19 +2113,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-12-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2119,13 +2133,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2142,7 +2156,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2152,7 +2166,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2161,19 +2175,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-3-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2181,13 +2195,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-orange">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2204,7 +2218,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2214,7 +2228,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2223,19 +2237,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-13-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2243,13 +2257,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-blue">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2266,7 +2280,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2276,7 +2290,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2285,19 +2299,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-10-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2305,13 +2319,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-30%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2328,7 +2342,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2338,7 +2352,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2347,19 +2361,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-6-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2367,13 +2381,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-pink">-22%</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2390,7 +2404,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2400,7 +2414,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2409,19 +2423,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-9-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2429,13 +2443,13 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
-  
+
                     <div class="product__badge light-green">Hot</div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2452,7 +2466,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2462,7 +2476,7 @@
                     </a>
                   </div>
                 </div>
-  
+
                 <div class="product__item">
                   <div class="product__banner">
                     <a href="details.html" class="product__images">
@@ -2471,19 +2485,19 @@
                         alt=""
                         class="product__img default"
                       />
-  
+
                       <img
                         src="assets/imgs/product-8-2.jpg"
                         alt=""
                         class="product__img hover"
                       />
                     </a>
-  
+
                     <div class="product__actions">
                       <a href="#" class="action__btn" aria-label="Quick View">
                         <i class="fi fi-rs-eye"></i>
                       </a>
-  
+
                       <a
                         href="#"
                         class="action__btn"
@@ -2491,11 +2505,11 @@
                       >
                         <i class="fi fi-rs-heart"></i>
                       </a>
-  
+
 
                     </div>
                   </div>
-  
+
                   <div class="product__content">
                     <span class="product__category">Clothing</span>
                     <a href="details.html">
@@ -2512,7 +2526,7 @@
                       <span class="new__price">$238.85</span>
                       <span class="old__price">$245.8</span>
                     </div>
-  
+
                     <a
                       href="#"
                       class="action__btn cart__btn"
@@ -2793,5 +2807,11 @@
     <script src="js/main.js"></script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
+    <!-- GSAP INDEX -->
+     <script src="js/gsap-index.js"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    
+  </body>
 </html>
