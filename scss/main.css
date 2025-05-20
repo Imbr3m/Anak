@@ -141,21 +141,27 @@ a {
   justify-content: center;
   font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
   font-family: Arial, Helvetica, sans-serif;
+  gap: 10px;
 }
-.pre-loader .content span {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  color: rgb(130, 6, 6);
-  margin: 1em;
+.pre-loader .content .pre-loader-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pre-loader .content .text {
-  margin-bottom: 1em;
-  color: brown;
+.pre-loader .content .pre-loader-container .pre-logo-text {
+  height: 50px;
+  width: 145px;
+}
+.pre-loader .content .pre-loader-container .pre-logo-img {
+  height: 60px;
+  width: auto;
 }
 .pre-loader .content .loader {
   width: 450px;
   height: 2px;
-  background: rgb(130, 6, 6);
+  background: rgb(0, 0, 0);
 }
 
 header {

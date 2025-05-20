@@ -139,24 +139,30 @@ a {
       justify-content: center;
       font-size: clamp(0.5rem, 1vw + 1rem, 3rem);
       font-family: Arial, Helvetica, sans-serif;
+      gap: 10px;
 
-      span {
-          font-family: Arial, Helvetica, sans-serif;
-          font-style: italic;
-          color: rgb(130, 6, 6);
+      .pre-loader-container {
+        
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-          margin: 1em;
-      }
-
-      .text {
-          margin-bottom: 1em;
-          color: brown;
+        .pre-logo-text {
+          height: 50px;
+          width: 145px;
+        }
+        .pre-logo-img {
+          height: 60px;
+          width: auto;
+        }
       }
 
       .loader {
           width: 450px;
           height: 2px;
-          background: rgb(130, 6, 6);;
+          background: rgb(0, 0, 0);;
       }
   }
 }
