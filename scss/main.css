@@ -213,7 +213,7 @@ header .nav__link {
   transition: all 0.2s cubic-bezier(0, 0, 0.05, 1);
 }
 header .nav__link.active-link, header .nav__link:hover {
-  color: rgb(216, 174, 122);
+  color: #d8ae7a;
 }
 header .nav__toggle {
   display: none;

@@ -64,12 +64,56 @@ document.addEventListener('DOMContentLoaded', function() {
     y: -100,
     ease: "power4.inOut",
   }, "-=1.5")
-  
+  tl.from(".nav__link.active-link", {
+    duration: 1,
+    color: "#000000", // Force black temporarily
+    ease: "power4.inOut"
+  }, "-=1.5")
+  .to(".nav__link.active-link", {
+    duration: 0.5, 
+    color: "#d8ae7a", //color of active page
+    delay: -0.75
+  });
   
 
-
+  // NAV BAR SCROLL OUT FUNCTION
+  let lastScrollTop = 0;
+  let navbar = document.querySelector('nav');
+  
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Only apply effect after scrolling down a bit (e.g., 100px)
+    if (scrollTop > 100) {
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down - hide navbar
+        gsap.to(navbar, {
+          duration: 0.4,
+          y: (-navbar.offsetHeight + -20),
+          ease: "power2.out"
+        });
+      } else {
+        // Scrolling up - show navbar
+        gsap.to(navbar, {
+          duration: 0.3,
+          y: 0,
+          ease: "power2.out"
+        });
+      }
+    } else {
+      // At the top - ensure navbar is visible
+      gsap.to(navbar, {
+        duration: 0.3,
+        y: 0,
+        ease: "power2.out"
+      });
+    }
+    
+    lastScrollTop = scrollTop;
+  });
 
 
 });
+
 
 
