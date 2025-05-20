@@ -1,4 +1,4 @@
-// Wait for DOM to be fully loaded
+// Loader and Intro header
 document.addEventListener('DOMContentLoaded', function() {
   // Correct plugin registration
   gsap.registerPlugin(ScrollTrigger);
@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, "-=1")
     tl.from("nav", {
     duration: 2,
+    // opacity: 0,
     y: -100,
     ease: "power4.inOut",
   }, "-=1.5")
@@ -112,8 +113,101 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScrollTop = scrollTop;
   });
 
+  gsap.from(".featured-category-section .cards .card", {
+    duration: 1,
+    x: 100,
+    opacity: 0,
+    stagger: {
+      each: 0.1,
+      from: "random", // Randomizes start point
+    },
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".featured-category-section",
+      start: "top 75%", 
+      end: "bottom center",
+      markers: true, 
+      toggleActions: "play none none none"
+    },
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
-
 
 
