@@ -357,7 +357,7 @@ main .trending-section .swiper .swiper-button-next {
   right: 0;
 }
 main .banner-section {
-  height: 400px;
+  height: 500px;
   width: 95%;
 }
 main .banner-section .banner-title {
@@ -368,7 +368,7 @@ main .banner-section .banner-title {
 main .banner-section .banner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
   gap: 0;
   width: 100%;
   height: 100%;
@@ -389,17 +389,15 @@ main .banner-section .banner .pic-1 {
 }
 main .banner-section .banner .pic-2 {
   grid-row: 1/2;
-  grid-column: 2/3;
+  grid-column: 2/4;
   background-color: #777;
 }
 main .banner-section .banner .pic-3 {
-  grid-row: 1/2;
-  grid-column: 3/4;
-  background-color: #999;
+  display: none;
 }
 main .banner-section .banner .pic-4 {
   grid-row: 2/3;
-  grid-column: 2/span 2;
+  grid-column: 2/4;
   background-color: #bbb;
 }
 main .banner-section .banner .pic-4 .inner-box {
@@ -597,11 +595,40 @@ main .spring-selction-section .new__arrivals .new__container .cards .product__it
   color: hsl(154, 13%, 32%);
   font-size: 0.875rem;
   transition: all 0.3s ease;
+  /* Add these tooltip styles (same as action__btn) */
+}
+main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn::before, main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  opacity: 0;
+}
+main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn::before {
+  content: "";
+  top: -2px;
+  border: 0.5rem solid transparent;
+  border-top-color: hsl(176, 88%, 27%);
+}
+main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn::after {
+  content: attr(aria-label); /* This shows the aria-label */
+  bottom: 100%;
+  background-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  padding-inline: 0.625rem;
+  border-radius: 0.25rem;
+  line-height: 2.58;
 }
 main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn:hover {
   background-color: hsl(176, 88%, 27%);
   border-color: hsl(176, 88%, 27%);
   color: hsl(0, 0%, 100%);
+}
+main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn:hover::before, main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .cart__btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.5rem);
 }
 main .spring-selction-section .new__arrivals .swiper {
   overflow: initial;
@@ -816,11 +843,40 @@ main .products-section .product__item .product__content .cart__btn {
   color: hsl(154, 13%, 32%);
   font-size: 0.875rem;
   transition: all 0.3s ease;
+  /* Add these tooltip styles (same as action__btn) */
+}
+main .products-section .product__item .product__content .cart__btn::before, main .products-section .product__item .product__content .cart__btn::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  opacity: 0;
+}
+main .products-section .product__item .product__content .cart__btn::before {
+  content: "";
+  top: -2px;
+  border: 0.5rem solid transparent;
+  border-top-color: hsl(176, 88%, 27%);
+}
+main .products-section .product__item .product__content .cart__btn::after {
+  content: attr(aria-label); /* This shows the aria-label */
+  bottom: 100%;
+  background-color: hsl(176, 88%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  padding-inline: 0.625rem;
+  border-radius: 0.25rem;
+  line-height: 2.58;
 }
 main .products-section .product__item .product__content .cart__btn:hover {
   background-color: hsl(176, 88%, 27%);
   border-color: hsl(176, 88%, 27%);
   color: hsl(0, 0%, 100%);
+}
+main .products-section .product__item .product__content .cart__btn:hover::before, main .products-section .product__item .product__content .cart__btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.5rem);
 }
 main .reviews-section {
   background: #fff;
