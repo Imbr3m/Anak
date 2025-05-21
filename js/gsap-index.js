@@ -149,6 +149,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   );
 
+  // MORE BUTTON ANIMATION
+  // Select all .more elements
+  document.querySelectorAll('.more').forEach(item => {
+    // Mouse enter (hover) animation
+    item.addEventListener('mouseenter', () => {
+      gsap.to(item, {
+        rotation: 14, // Rotate 10 degrees clockwise
+        scale: 1.2, // Tiny grow
+        duration: 0.3,
+        ease: "elastic.out(1, 0.5)" // Playful bounce effect
+      });
+    });
+
+    // Mouse leave animation
+    item.addEventListener('mouseleave', () => {
+      gsap.to(item, {
+        rotation: 0, // Return to original position
+        scale: 1.00,
+        duration: 0.6,
+        ease: "back.out(1.7)" // Smooth return with slight overshoot
+      });
+    });
+  });
+  
 
 
 
