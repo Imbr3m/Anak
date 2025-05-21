@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
         trigger: ".spring-selction-section",
         start: "5% center",
         end: "100% center",
-        markers: true,
         toggleActions: "play reverse play reverse"
       }
     }

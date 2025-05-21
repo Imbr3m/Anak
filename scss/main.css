@@ -27,7 +27,7 @@ svg {
 }
 
 .section--lg {
-  padding-block: 4rem;
+  padding-block: 2rem;
 }
 
 .section__title {
@@ -788,7 +788,7 @@ main .products-section .tab__btns .tab__btn {
   cursor: pointer;
 }
 main .products-section .tab__btns .tab__btn.active-tab {
-  color: hsl(34, 57%, 70%);
+  color: hsl(24, 25%, 25%);
   background-color: hsl(34, 94%, 87%);
 }
 main .products-section .tab__items .tab__item:not(.active-tab) {

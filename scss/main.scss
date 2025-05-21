@@ -28,7 +28,7 @@ svg {
   padding-block: 2rem;
 }
 .section--lg {
-  padding-block: 4rem;
+  padding-block: 2rem;
 }
 .section__title {
   font-size: $h4-font-size;
@@ -933,7 +933,7 @@ main {
         cursor: pointer;
   
         &.active-tab {
-          color: $first-color;
+          color: $title-color;
           background-color: $second-color;
         }
       }
@@ -1624,9 +1624,6 @@ main {
 
 
 // SHOWCASE SECTION
-.showcase-section {
-
-}
 .showcase__container {
   grid-template-columns: repeat(4, 1fr);
   // max-width: 1320px;
@@ -1687,3 +1684,5 @@ main {
   text-overflow: ellipsis;
   margin-bottom: 0.5rem;
 }
+
+

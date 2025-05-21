@@ -1,9 +1,136 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spartan:wght@400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 4rem;
+
+  /*========== Colors ==========*/
+  /* Color mode HSL(hue, saturation, lightness) */
+  --primary-cream: #F5E6D1;    
+  --secondary-cream: #D4A373;
+  --bg-cream: #EEDEC5;   
+
+
+  --button-primary-color: #D4A373;     
+  --button-primary-color-hover: #EEDEC5; 
+
+  --first-color: hsl(34, 57%, 70%);    
+  --first-color-alt: hsl(34, 47%, 85%); 
+  --second-color: hsl(34, 94%, 87%);   
+  --deals-color: "brown";
+
+
+  --title-color: hsl(24, 25%, 25%);     
+  --text-color: hsl(24, 15%, 45%);     
+  --text-color-light: hsl(33, 6%, 68%); 
+
+
+  --body-color: hsl(40, 33%, 97%);      
+  --container-color: hsl(34, 43%, 93%); 
+  --border-color: hsl(34, 35%, 85%);    
+  --border-color-alt: hsl(34, 25%, 80%); 
+
+
+  /*========== Font and typography ==========*/
+  /* .5rem = 8px | 1rem = 16px ... */
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.75rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.375rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.6875rem;
+
+  /*========== Font weight ==========*/
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  /*========== Transition ==========*/
+  --transition: cubic-bezier(0, 0, 0.05, 1);
+}
+
+/* Responsive typography */
+@media screen and (max-width: 1200px) {
+  :root {
+    --big-font-size: 2.25rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.375rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.125rem;
+    --large-font-size: 1rem;
+    --normal-font-size: 0.9375rem;
+    --small-font-size: 0.8125rem;
+    --smaller-font-size: 0.6875rem;
+    --tiny-font-size: 0.625rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+body {
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-400);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  
+  color: var(--title-color);
+  font-weight: var(--weight-600);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+textarea,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1320px;
-  margin-inline: auto;
-  padding-inline: 0.75rem;
+  max-width: 1420px;
 }
 
 .grid {
@@ -16,7 +143,7 @@
 }
 
 .section--lg {
-  padding-block: 4rem;
+  padding-block: 2rem;
 }
 
 .section__title {
@@ -193,7 +320,7 @@
 }
 
 .home__subtitle {
-  font-family: var(--second-font);
+  
   font-weight: var(--weight-600);
   margin-bottom: 1rem;
   display: block;
@@ -228,7 +355,7 @@
   height: 49px;
   line-height: 49px;
   border-radius: 0.25rem;
-  font-family: var(--second-font);
+  
   font-size: var(--small-font-size);
   font-weight: var(--weight-700);
   transition: all 0.4s var(--transition);
@@ -238,11 +365,22 @@
   background-color: transparent;
   color: var(--first-color);
 }
-
-.btn--md,
-.btn--sm {
-  font-family: var(--body-font);
+.sold {
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0);
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+  padding-inline: 1.75rem;
+  height: 49px;
+  line-height: 49px;
+  border-radius: 0.25rem;
+  
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-700);
+  transition: all 0.4s var(--transition);
 }
+
+
 
 .btn--md {
   height: 45px;
@@ -326,7 +464,7 @@
   color: var(--title-color);
   padding: 1rem 1.25rem 0.875rem;
   border-radius: 0.25rem;
-  font-family: var(--second-font);
+  
   font-size: var(--small-font-size);
   font-weight: var(--weight-600);
   cursor: pointer;
@@ -337,9 +475,10 @@
 }
 
 .product__item {
-  border: 1px solid var(--border-color);
+  border: 1px solid hsl(34, 35%, 85%);
   border-radius: 1.5rem;
   transition: all 0.2s var(--transition);
+  background-color: rgb(255, 248, 234);
 }
 
 .product__banner {
@@ -550,7 +689,7 @@
 }
 
 .deals__category {
-  font-family: var(--second-font);
+  
   font-size: var(--small-font-size);
 }
 
@@ -697,7 +836,7 @@
 
 .newsletter__description {
   color: var(--title-color);
-  font-family: var(--second-font);
+  
   font-size: var(--small-font-size);
   font-weight: var(--weight-600);
   text-align: center;
@@ -725,7 +864,7 @@
   color: var(--body-color);
   padding-inline: 2rem;
   border-radius: 0 0.25rem 0.25rem 0;
-  font-family: var(--second-font);
+  
   font-weight: var(--weight-500);
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -806,8 +945,10 @@
 
 /*=============== BREADCRUMBS ===============*/
 .breadcrumb {
+  margin-top: 125px;
   background-color: var(--container-color);
   padding-block: 1.5rem;
+  width: 100%;
 }
 
 .breadcrumb__list {
@@ -998,14 +1139,23 @@
 }
 
 .detail__tab {
-  font-family: var(--second-font);
+  
   font-size: var(--large-font-size);
   font-weight: var(--weight-600);
   cursor: pointer;
+
+}
+
+.details__tab {
+  width: 100%;
 }
 
 .detail__tab.active-tab {
   color: var(--first-color);
+}
+
+.details__tab-content {
+  width: 100%;
 }
 
 .details__tab-content:not(.active-tab) {
@@ -1082,6 +1232,9 @@
 }
 
 /*=============== CART ===============*/
+
+
+
 .table__container {
   overflow-x: auto;
 }
@@ -1339,6 +1492,10 @@
 }
 
 /*=============== LOGIN & REGISTER ===============*/
+.login-register {
+  width: 95%;
+}
+
 .login-register__container {
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
@@ -1352,6 +1509,9 @@
 }
 
 /*=============== ACCOUNTS ===============*/
+.accounts {
+  width: 95%;
+}
 .accounts__container {
   grid-template-columns: 4fr 8fr;
 }
@@ -1562,6 +1722,9 @@
   .checkout__group:nth-child(2) {
     padding: 1.5rem;
   }
+
+
+
 
   .details__brand {
     margin-block: 0.75rem;
