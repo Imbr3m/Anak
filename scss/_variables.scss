@@ -1,21 +1,29 @@
 // Color theme
 
-$primary-cream: #EEDEC5;
-$secondary-cream: #DAB086;
+// Core Cream Palette
+$primary-cream: #F5E6D1;       // Soft warm cream (primary)
+$secondary-cream: #D4A373;
+$bg-cream: #EEDEC5;     // Earthy caramel (secondary)
 
-$button-primary-color: #DAB086;
-$button-primary-color-hover: #EEDEC5;
+// Button Colors
+$button-primary-color: #D4A373;       // Caramel buttons
+$button-primary-color-hover: #EEDEC5; // Light cream hover
 
-$first-color: hsl(176, 88%, 27%);
-$first-color-alt: hsl(129, 44%, 94%);
-$second-color: hsl(34, 94%, 87%);
-$title-color: hsl(0, 0%, 13%);
-$text-color: hsl(154, 13%, 32%);
-$text-color-light: hsl(60, 1%, 56%);
-$body-color: hsl(0, 0%, 100%);
-$container-color: hsl(0, 0%, 93%);
-$border-color: hsl(129, 36%, 85%);
-$border-color-alt: hsl(113, 15%, 90%);
+// Accent Colors
+$first-color: hsl(34, 57%, 70%);     // Warm peach (replaces green)
+$first-color-alt: hsl(34, 47%, 85%); // Lighter peach
+$second-color: hsl(34, 94%, 87%);    // Light cream (unchanged)
+
+// Text & Backgrounds
+$title-color: hsl(24, 25%, 25%);     // Deep brown (for contrast)
+$text-color: hsl(24, 15%, 45%);      // Muted taupe
+$text-color-light: hsl(34, 20%, 75%); // Light warm gray
+
+// Layout Colors
+$body-color: hsl(40, 33%, 97%);      // Off-white cream
+$container-color: hsl(34, 43%, 93%); // Warm cream container
+$border-color: hsl(34, 35%, 85%);    // Soft peach border
+$border-color-alt: hsl(34, 25%, 80%); // Slightly darker border
 
 
 
@@ -55,3 +63,4 @@ $weight-700: 700;
 $header-height: 4rem;
 
 $transition: cubic-bezier(0, 0, 0.05, 1);
+

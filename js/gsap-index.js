@@ -111,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     lastScrollTop = scrollTop;
-  });
+  }); // NAV BAR SCROLL OUT FUNCTION END
 
+  // FEATURED CATEGORY ANIMATION
   gsap.from(".featured-category-section .cards .card", {
     duration: 1,
     x: 100,
@@ -126,10 +127,27 @@ document.addEventListener('DOMContentLoaded', function() {
       trigger: ".featured-category-section",
       start: "top 75%", 
       end: "bottom center",
-      markers: true, 
       toggleActions: "play none none none"
     },
   });
+
+  // Dark mode transition
+ // Add class instead of direct animation
+  gsap.fromTo("main",
+    { backgroundColor: "#ffffff" },
+    {
+      backgroundColor: "#f5deb3",
+      duration: 0.7,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".spring-selction-section",
+        start: "5% center",
+        end: "100% center",
+        markers: true,
+        toggleActions: "play reverse play reverse"
+      }
+    }
+  );
 
 
 
