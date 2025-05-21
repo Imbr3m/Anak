@@ -35,7 +35,7 @@ svg {
   margin-bottom: 1.5rem;
 }
 .section__title span {
-  color: $first-color;
+  color: $text-color;
 }
 .form__input {
   border: 1px solid $border-color-alt;
@@ -45,7 +45,7 @@ svg {
   font-size: $small-font-size;
 }
 .new__price {
-  color: $first-color;
+  color: $button-primary-color;
   font-weight: $weight-600;
 }
 .old__price {
@@ -882,8 +882,8 @@ main {
               top: -3.5rem;
               position: absolute;
 
-              background-color: wheat;
-              border: 1px solid whitesmoke;
+              background-color: $button-primary-color;
+              border: 1px solid $title-color;
               width: 30px;
               height: 30px;
               border-radius: 50%;
@@ -1106,6 +1106,7 @@ main {
         .product__title {
           font-size: $normal-font-size;
           margin-block: 0.75rem 0.5rem;
+          color: $title-color;
         }
   
         .product__rating {
@@ -1527,11 +1528,11 @@ main {
 }
 
 .deals__item:nth-child(1) {
-  background-image: url(bg-imgs/deals-1.jpg);
+  background-image: url(bg-imgs/deals-2.png);
 }
 
 .deals__item:nth-child(2) {
-  background-image: url(bg-imgs/deals-2.png);
+  background-image: url(bg-imgs/deals-1.png);
 }
 
 .deals__item {
@@ -1541,10 +1542,12 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .deals__brand {
-  color: $first-color;
+  color: $title-color;
   font-size: $h3-font-size;
   margin-bottom: 0.25rem;
 }
@@ -1566,7 +1569,7 @@ main {
 }
 
 .deals__price .new__price {
-  color: hsl(352, 100%, 60%)
+  color: hsl(0, 58%, 46%)
 }
 
 .deals__countdown-text {
@@ -1592,7 +1595,7 @@ main {
 }
 
 .countdown__period {
-  background-color: $first-color;
+  background-color: $text-color;
   color: $body-color;
   width: 60px;
   height: 50px;
@@ -1612,7 +1615,7 @@ main {
 
 .deals__btn .btn {
   background-color: transparent;
-  color: $first-color;
+  color: $text-color;
   border: solid 2px;
 }
 
@@ -1631,7 +1634,7 @@ main {
 
 .showcase__wrapper .section__title {
   font-size: $normal-font-size;
-  border-bottom: 1px solid $border-color-alt;
+  border-bottom: 2px solid $first-color;
   padding-bottom: 0.75rem;
   margin-bottom: 2rem;
   position: relative;
@@ -1644,15 +1647,21 @@ main {
   bottom: -1.3px;
   width: 50px;
   height: 2px;
-  background-color: $first-color;
+  background-color: $text-color;
 }
 
 .showcase__item {
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
-  background-color: white;
-  
+  background-color: rgb(255, 248, 234);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  border-radius: 10px;
+}
+.showcase__item:hover {
+  transform: translateY(-5px) scale(1.02); /* Slight lift + growth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .showcase__item:not(:last-child) {

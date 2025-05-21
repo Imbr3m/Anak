@@ -36,7 +36,7 @@ svg {
 }
 
 .section__title span {
-  color: hsl(34, 57%, 70%);
+  color: hsl(24, 15%, 45%);
 }
 
 .form__input {
@@ -48,12 +48,12 @@ svg {
 }
 
 .new__price {
-  color: hsl(34, 57%, 70%);
+  color: #D4A373;
   font-weight: 600;
 }
 
 .old__price {
-  color: hsl(34, 20%, 75%);
+  color: hsl(33, 6%, 68%);
   font-size: 0.875rem;
   text-decoration: line-through;
 }
@@ -671,7 +671,7 @@ main .spring-selction-section .new__arrivals .new__container .cards .product__it
   position: relative;
 }
 main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .product__category {
-  color: hsl(34, 20%, 75%);
+  color: hsl(33, 6%, 68%);
   font-size: 0.75rem;
 }
 main .spring-selction-section .new__arrivals .new__container .cards .product__item .product__content .product__title {
@@ -749,8 +749,8 @@ main .spring-selction-section .new__arrivals .swiper .swiper-button-next-arrival
 main .spring-selction-section .new__arrivals .swiper .swiper-button-next-arrivals, main .spring-selction-section .new__arrivals .swiper .swiper-button-prev-arrivals {
   top: -3.5rem;
   position: absolute;
-  background-color: wheat;
-  border: 1px solid whitesmoke;
+  background-color: #D4A373;
+  border: 1px solid hsl(24, 25%, 25%);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -924,12 +924,13 @@ main .products-section .product__item .product__content {
   position: relative;
 }
 main .products-section .product__item .product__content .product__category {
-  color: hsl(34, 20%, 75%);
+  color: hsl(33, 6%, 68%);
   font-size: 0.75rem;
 }
 main .products-section .product__item .product__content .product__title {
   font-size: 1rem;
   margin-block: 0.75rem 0.5rem;
+  color: hsl(24, 25%, 25%);
 }
 main .products-section .product__item .product__content .product__rating {
   color: hsl(42, 100%, 50%);
@@ -1211,7 +1212,7 @@ main .newsletter__btn:hover {
   width: 120px;
 }
 .footer__content .footer__subtitle {
-  color: hsl(34, 20%, 75%);
+  color: hsl(33, 6%, 68%);
   font-size: 0.875rem;
   margin-block: 1.25rem 0.625rem;
 }
@@ -1257,7 +1258,7 @@ main .newsletter__btn:hover {
 }
 .footer__bottom .copyright,
 .footer__bottom .designer {
-  color: hsl(34, 20%, 75%);
+  color: hsl(33, 6%, 68%);
   font-size: 0.875rem;
 }
 
@@ -1275,11 +1276,11 @@ main .newsletter__btn:hover {
 }
 
 .deals__item:nth-child(1) {
-  background-image: url(bg-imgs/deals-1.jpg);
+  background-image: url(bg-imgs/deals-2.png);
 }
 
 .deals__item:nth-child(2) {
-  background-image: url(bg-imgs/deals-2.png);
+  background-image: url(bg-imgs/deals-1.png);
 }
 
 .deals__item {
@@ -1289,10 +1290,12 @@ main .newsletter__btn:hover {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .deals__brand {
-  color: hsl(34, 57%, 70%);
+  color: hsl(24, 25%, 25%);
   font-size: 1.75rem;
   margin-bottom: 0.25rem;
 }
@@ -1314,7 +1317,7 @@ main .newsletter__btn:hover {
 }
 
 .deals__price .new__price {
-  color: hsl(352, 100%, 60%);
+  color: hsl(0, 58%, 46%);
 }
 
 .deals__countdown-text {
@@ -1341,7 +1344,7 @@ main .newsletter__btn:hover {
 }
 
 .countdown__period {
-  background-color: hsl(34, 57%, 70%);
+  background-color: hsl(24, 15%, 45%);
   color: hsl(40, 33%, 97%);
   width: 60px;
   height: 50px;
@@ -1361,7 +1364,7 @@ main .newsletter__btn:hover {
 
 .deals__btn .btn {
   background-color: transparent;
-  color: hsl(34, 57%, 70%);
+  color: hsl(24, 15%, 45%);
   border: solid 2px;
 }
 
@@ -1372,7 +1375,7 @@ main .newsletter__btn:hover {
 
 .showcase__wrapper .section__title {
   font-size: 1rem;
-  border-bottom: 1px solid hsl(34, 25%, 80%);
+  border-bottom: 2px solid hsl(34, 57%, 70%);
   padding-bottom: 0.75rem;
   margin-bottom: 2rem;
   position: relative;
@@ -1385,7 +1388,7 @@ main .newsletter__btn:hover {
   bottom: -1.3px;
   width: 50px;
   height: 2px;
-  background-color: hsl(34, 57%, 70%);
+  background-color: hsl(24, 15%, 45%);
 }
 
 .showcase__item {
@@ -1393,7 +1396,14 @@ main .newsletter__btn:hover {
   align-items: center;
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
-  background-color: white;
+  background-color: rgb(255, 248, 234);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: 10px;
+}
+
+.showcase__item:hover {
+  transform: translateY(-5px) scale(1.02); /* Slight lift + growth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .showcase__item:not(:last-child) {

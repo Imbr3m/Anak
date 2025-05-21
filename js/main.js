@@ -88,3 +88,53 @@ const carousel = document.querySelector(".reviews-carousel");
     }
 
 
+// countdown for deals section
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize each deal item with its own timer
+  document.querySelectorAll('.deals__item').forEach((dealItem, index) => {
+    // Set different end times for each deal (e.g., 48h + index*12h for variety)
+    const countdownDate = new Date();
+    countdownDate.setHours(countdownDate.getHours() + 48 + (index * 12));
+    
+    function updateCountdown() {
+      const now = new Date();
+      const diff = countdownDate - now;
+      
+      // Calculate time units
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      // Find countdown elements within THIS deal item only
+      const periods = dealItem.querySelectorAll('.countdown__period');
+      periods[0].textContent = days.toString().padStart(2, '0');
+      periods[1].textContent = hours.toString().padStart(2, '0');
+      periods[2].textContent = minutes.toString().padStart(2, '0');
+      periods[3].textContent = seconds.toString().padStart(2, '0');
+      
+      // Handle expiration
+      if (diff < 0) {
+        clearInterval(timer);
+        dealItem.querySelector('.deals__countdown-text').textContent = 'Offer Expired!';
+        dealItem.classList.add('expired');
+      }
+    }
+    
+    // Start the timer for this deal item
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+  });
+});
+
+// Animate number changes
+const periods = dealItem.querySelectorAll('.countdown__period');
+periods.forEach(period => {
+  if (period._lastValue !== period.textContent) {
+    gsap.fromTo(period,
+      { y: -10, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.3 }
+    );
+    period._lastValue = period.textContent;
+  }
+});
