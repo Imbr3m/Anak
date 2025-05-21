@@ -149,9 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 
   // MORE BUTTON ANIMATION
-  // Select all .more elements
   document.querySelectorAll('.more').forEach(item => {
-    // Mouse enter (hover) animation
     item.addEventListener('mouseenter', () => {
       gsap.to(item, {
         rotation: 14, // Rotate 10 degrees clockwise
@@ -170,7 +168,27 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: "back.out(1.7)" // Smooth return with slight overshoot
       });
     });
+  }); // MORE BUTTON ANIMATION END
+
+  // BANNER DEXC ANIMATION
+  gsap.from(".desc", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    stagger: {
+      each: 0.2,
+      from: "random", // Randomizes start point
+    },
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".banner",
+      start: "start 50%", 
+      end: "bottom center",
+      toggleActions: "play none none none"
+    },
   });
+  // REVIEW DEXC ANIMATION
+
   
 
 

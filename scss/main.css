@@ -39,6 +39,23 @@ svg {
   color: hsl(24, 15%, 45%);
 }
 
+.header__search {
+  width: 340px;
+  position: relative;
+}
+
+button,
+textarea,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.header__search .form__input {
+  width: 100%;
+}
+
 .form__input {
   border: 1px solid hsl(34, 25%, 80%);
   padding-inline: 1rem;

@@ -37,6 +37,21 @@ svg {
 .section__title span {
   color: $text-color;
 }
+.header__search {
+  width: 340px;
+  position: relative;
+}
+
+button,
+textarea,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.header__search .form__input {
+  width: 100%;
+}
 .form__input {
   border: 1px solid $border-color-alt;
   padding-inline: 1rem;
