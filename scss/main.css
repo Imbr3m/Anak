@@ -1561,6 +1561,8 @@ main .newsletter__btn:hover {
   grid-template-columns: 280px 1fr;
   gap: 2rem;
   margin-top: 2rem;
+  justify-content: start;
+  align-items: start;
 }
 
 .filters {
