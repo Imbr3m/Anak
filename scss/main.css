@@ -1681,15 +1681,38 @@ main .newsletter__btn:hover {
   color: hsl(24, 15%, 45%);
 }
 .filters .filter-section .filter-options .checkbox-label input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 16px;
   height: 16px;
-  border: 1px solid hsl(34, 35%, 85%);
+  border: 1.5px solid hsl(34, 35%, 85%);
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
+  margin: 0;
 }
 .filters .filter-section .filter-options .checkbox-label input[type=checkbox]:checked {
-  background-color: #D4A373;
-  border-color: #D4A373;
+  background-color: rgb(244, 225, 190);
+  border-color: rgb(173, 143, 104);
+}
+.filters .filter-section .filter-options .checkbox-label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid rgb(173, 143, 104);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.filters .filter-section .filter-options .checkbox-label input[type=checkbox]:hover {
+  border-color: rgb(173, 143, 104);
+}
+.filters .filter-section .filter-options .checkbox-label input[type=checkbox]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 225, 190, 0.3);
 }
 .filters .filter-section .filter-options .checkbox-label .color-box {
   width: 20px;

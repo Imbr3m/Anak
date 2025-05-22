@@ -1968,15 +1968,41 @@ main {
         color: $text-color;
 
         input[type="checkbox"] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           width: 16px;
           height: 16px;
-          border: 1px solid $border-color;
+          border: 1.5px solid $border-color;
           border-radius: 3px;
           cursor: pointer;
-
+          position: relative;
+          margin: 0;
+          
           &:checked {
-            background-color: $button-primary-color;
-            border-color: $button-primary-color;
+            background-color: rgb(244, 225, 190); // Cream color to match theme
+            border-color: rgb(173, 143, 104); // Darker cream for border
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 4px;
+              top: 1px;
+              width: 6px;
+              height: 10px;
+              border: solid rgb(173, 143, 104);
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+          &:hover {
+            border-color: rgb(173, 143, 104);
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(244, 225, 190, 0.3);
           }
         }
 
