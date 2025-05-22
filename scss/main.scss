@@ -1588,6 +1588,10 @@ main {
   color: hsl(0, 58%, 46%)
 }
 
+.deals__price .new__price {
+  color: hsl(0, 58%, 46%)
+}
+
 .deals__countdown-text {
   margin-bottom: 0.25rem;
 }
@@ -1698,6 +1702,116 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0.5rem;
+}
+
+/* Login Modal Styles */
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+  }
+
+  .close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .modal-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #D4A373;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#D4A373, 10%);
+    }
+  }
+
+  .form-footer {
+    margin-top: 1rem;
+    text-align: center;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .register-link,
+  .forgot-password {
+    color: #D4A373;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 

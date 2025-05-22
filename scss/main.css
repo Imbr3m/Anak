@@ -1337,6 +1337,10 @@ main .newsletter__btn:hover {
   color: hsl(0, 58%, 46%);
 }
 
+.deals__price .new__price {
+  color: hsl(0, 58%, 46%);
+}
+
 .deals__countdown-text {
   margin-bottom: 0.25rem;
 }
@@ -1444,4 +1448,101 @@ main .newsletter__btn:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0.5rem;
+}
+
+/* Login Modal Styles */
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.login-modal.active {
+  display: flex;
+}
+.login-modal .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+.login-modal .close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+.login-modal .close-modal:hover {
+  color: #333;
+}
+.login-modal .modal-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.login-modal .modal-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+.login-modal .form-group {
+  margin-bottom: 1rem;
+}
+.login-modal .form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.login-modal .login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #D4A373;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+.login-modal .login-btn:hover {
+  background-color: #c8894c;
+}
+.login-modal .form-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+.login-modal .form-footer p {
+  margin-bottom: 0.5rem;
+}
+.login-modal .register-link,
+.login-modal .forgot-password {
+  color: #D4A373;
+  text-decoration: none;
+}
+.login-modal .register-link:hover,
+.login-modal .forgot-password:hover {
+  text-decoration: underline;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=main.css.map */
