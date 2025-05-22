@@ -8,21 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // up the logo and text
   tl.from(".pre-loader-container", {
-    duration: 0.8,
+    duration: 0.5,
     y: 40,
     opacity: 0,
     ease: "power2.inOut",
-    delay: 1
+    delay: 0.8
   })
   tl.from(".pre-logo-img", {
-    duration: 0.8,
+    duration: 0.5,
     x: "100px",
     scale: 1.5,
     ease: "power2.inOut",
-    delay: 0.5
+    delay: 0.3
   })
   tl.from(".pre-logo-text", {
-    duration: 0.8,
+    duration: 0.5,
     x: 10,
     opacity: 0,
     ease: "power2.inOut",
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     delay: -1,
   }, "-=0.5") 
   .to(".pre-loader", {
-    duration: 2,
+    duration: 1.75,
     top: "-110%",
     ease: "power4.inOut",
     delay: -0.5,
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     duration: 2,
     y: -45,
     ease: "power4.inOut",
-  }, "-=1")
+  }, "-=1.5")
     tl.from("nav", {
     duration: 2,
     // opacity: 0,

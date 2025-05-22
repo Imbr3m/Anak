@@ -22,7 +22,6 @@
   <body>
 
     <!-- NAV BAR  -->
-      <!-- note to self make the nav dissapear when scroll up -->
     <header>
         <nav class="nav container">
           <a href="index.html" class="nav__logo">
@@ -46,15 +45,11 @@
               </li>
 
               <li class="nav__item">
-                <a href="shop.html" class="nav__link">Shop</a>
+                <a href="shop.html" class="nav__link">Catalog</a>
               </li>
 
               <li class="nav__item">
                 <a href="accounts.html" class="nav__link">My Account</a>
-              </li>
-
-              <li class="nav__item">
-                <a href="login-register.html" class="nav__link">Login</a>
               </li>
             </ul>
 
@@ -72,6 +67,10 @@
           </div>
 
           <div class="header__user-actions">
+            <a href="#" class="header__action-btn" id="loginLink">
+              <img src="assets/imgs/account-svgrepo-com.svg" alt="Account" />
+            </a>
+
             <a href="wishlist.html" class="header__action-btn">
               <img src="assets/imgs/icon-heart.svg" alt="" />
               <span class="count">3</span>
@@ -88,6 +87,61 @@
           </div>
         </nav>
     </header>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2>Login</h2>
+        </div>
+        <div class="modal-body">
+          <form class="login-form">
+            <div class="form-group">
+              <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+          </form>
+          <div class="form-footer">
+            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="login-modal" id="registerModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2>Create Account</h2>
+        </div>
+        <div class="modal-body">
+          <form class="register-form">
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="login-btn">Create Account</button>
+          </form>
+          <div class="form-footer">
+            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <!-- MAIN -->
     <main style="background-color: hsl(33, 58%, 96%);">
@@ -96,7 +150,7 @@
         <ul class="breadcrumb__list flex container">
           <li><a href="index.html" class="breadcrumb__link">Home</a></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">Catalog</span></li>
           <li><span class="breadcrumb__link">></span></li>
           <li><span class="breadcrumb__link">Cart</span></li>
         </ul>

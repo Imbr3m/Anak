@@ -96,7 +96,10 @@ function initializeReviews() {
 
 // Deals Countdown
 function initializeDeals() {
-    document.querySelectorAll('.deals__item').forEach((dealItem, index) => {
+    const dealItems = document.querySelectorAll('.deals__item');
+    
+    dealItems.forEach((dealItem, index) => {
+        // Set different end times for each deal
         const countdownDate = new Date();
         countdownDate.setHours(countdownDate.getHours() + 48 + (index * 12));
         
@@ -110,22 +113,39 @@ function initializeDeals() {
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
             const periods = dealItem.querySelectorAll('.countdown__period');
+            
             if (periods.length === 4) {
-                periods[0].textContent = days.toString().padStart(2, '0');
-                periods[1].textContent = hours.toString().padStart(2, '0');
-                periods[2].textContent = minutes.toString().padStart(2, '0');
-                periods[3].textContent = seconds.toString().padStart(2, '0');
-
-                // Animate number changes
-                periods.forEach(period => {
-                    if (period._lastValue !== period.textContent) {
+                // Update the countdown numbers
+                periods.forEach((period, i) => {
+                    const newValue = [days, hours, minutes, seconds][i].toString().padStart(2, '0');
+                    if (period.textContent !== newValue) {
+                        // Create a temporary span for the new number
+                        const newSpan = document.createElement('span');
+                        newSpan.textContent = newValue;
+                        newSpan.style.position = 'absolute';
+                        newSpan.style.width = '100%';
+                        newSpan.style.left = '0';
+                        
+                        // Position the new number and animate it
                         if (typeof gsap !== 'undefined') {
-                            gsap.fromTo(period,
-                                { y: -10, opacity: 0 },
-                                { y: 0, opacity: 1, duration: 0.3 }
+                            // Add new number coming from top
+                            period.appendChild(newSpan);
+                            gsap.fromTo(newSpan,
+                                { y: -20 },
+                                { 
+                                    y: 0, 
+                                    duration: 0.3, 
+                                    ease: 'power2.out',
+                                    onComplete: () => {
+                                        // Update the main text and remove the temporary span
+                                        period.textContent = newValue;
+                                    }
+                                }
                             );
+                        } else {
+                            // If GSAP is not available, just update the number
+                            period.textContent = newValue;
                         }
-                        period._lastValue = period.textContent;
                     }
                 });
             }
@@ -140,57 +160,87 @@ function initializeDeals() {
             }
         }
         
+        // Initial update
         updateCountdown();
+        // Start the timer
         const timer = setInterval(updateCountdown, 1000);
+        
+        // Store timer reference for cleanup
+        dealItem._timer = timer;
+    });
+}
+
+// Cleanup function for deals
+function cleanupDeals() {
+    const dealItems = document.querySelectorAll('.deals__item');
+    dealItems.forEach(dealItem => {
+        if (dealItem._timer) {
+            clearInterval(dealItem._timer);
+        }
     });
 }
 
 // Login Modal
 function initializeLoginModal() {
-    const loginModal = document.getElementById('loginModal');
     const loginLink = document.getElementById('loginLink');
-    const closeModal = document.querySelector('.close-modal');
-
-    console.log('Login elements:', { loginModal, loginLink, closeModal }); // Debug log
-
-    if (loginModal && loginLink && closeModal) {
-        // Open modal
-        loginLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log('Login link clicked'); // Debug log
-            loginModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        // Close modal
-        closeModal.addEventListener('click', () => {
-            console.log('Close button clicked'); // Debug log
-            loginModal.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        // Close modal when clicking outside
-        loginModal.addEventListener('click', (e) => {
-            if (e.target === loginModal) {
-                console.log('Clicked outside modal'); // Debug log
-                loginModal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Handle form submission
-        const loginForm = document.querySelector('.login-form');
-        if (loginForm) {
-            loginForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                console.log('Login form submitted');
-            });
-        }
-    } else {
-        console.error('Some modal elements are missing:', {
-            modal: !!loginModal,
-            link: !!loginLink,
-            closeBtn: !!closeModal
-        });
+    const loginModal = document.getElementById('loginModal');
+    const registerModal = document.getElementById('registerModal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+    const registerLink = document.querySelector('.register-link');
+    const loginBackLink = document.querySelector('.login-link');
+    
+    function closeAllModals() {
+        loginModal.style.display = 'none';
+        registerModal.style.display = 'none';
     }
+    
+    // Toggle login modal when clicking the account icon
+    loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.style.display = 'block';
+    });
+    
+    // Close modals when clicking the close button
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeAllModals);
+    });
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === loginModal || e.target === registerModal) {
+            closeAllModals();
+        }
+    });
+    
+    // Switch to register modal
+    registerLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.style.display = 'none';
+        registerModal.style.display = 'block';
+    });
+    
+    // Switch back to login modal
+    loginBackLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        registerModal.style.display = 'none';
+        loginModal.style.display = 'block';
+    });
+
+    // Handle form submissions
+    const loginForm = document.querySelector('.login-form');
+    const registerForm = document.querySelector('.register-form');
+
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your login logic here
+        console.log('Login submitted');
+        closeAllModals();
+    });
+
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your registration logic here
+        console.log('Registration submitted');
+        closeAllModals();
+    });
 }

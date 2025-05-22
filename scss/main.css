@@ -1365,16 +1365,24 @@ main .newsletter__btn:hover {
 }
 
 .countdown__period {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
   background-color: hsl(24, 15%, 45%);
   color: hsl(40, 33%, 97%);
   width: 60px;
   height: 50px;
   line-height: 50px;
-  text-align: center;
   border-radius: 0.25rem;
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+.countdown__period span {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .unit {
@@ -1460,80 +1468,81 @@ main .newsletter__btn:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-.login-modal.active {
-  display: flex;
 }
 .login-modal .modal-content {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  position: relative;
-  animation: modalFadeIn 0.3s ease-out;
-}
-.login-modal .close-modal {
   position: absolute;
-  right: 1.5rem;
-  top: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #666;
-}
-.login-modal .close-modal:hover {
-  color: #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .login-modal .modal-header {
-  margin-bottom: 1.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 .login-modal .modal-header h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: hsl(24, 25%, 25%);
+}
+.login-modal .close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: hsl(24, 15%, 45%);
+}
+.login-modal .close-modal:hover {
+  color: hsl(34, 57%, 70%);
 }
 .login-modal .form-group {
   margin-bottom: 1rem;
 }
 .login-modal .form-group input {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1rem;
+}
+.login-modal .form-group input:focus {
+  outline: none;
+  border-color: hsl(34, 57%, 70%);
 }
 .login-modal .login-btn {
   width: 100%;
-  padding: 0.8rem;
-  background-color: #D4A373;
-  color: #fff;
+  padding: 0.75rem;
+  background-color: hsl(34, 57%, 70%);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 .login-modal .login-btn:hover {
-  background-color: #c8894c;
+  background-color: #d3a15f;
 }
 .login-modal .form-footer {
   margin-top: 1rem;
   text-align: center;
+  font-size: 0.9rem;
 }
-.login-modal .form-footer p {
-  margin-bottom: 0.5rem;
-}
-.login-modal .register-link,
-.login-modal .forgot-password {
-  color: #D4A373;
+.login-modal .form-footer a {
+  color: hsl(34, 57%, 70%);
   text-decoration: none;
 }
-.login-modal .register-link:hover,
-.login-modal .forgot-password:hover {
+.login-modal .form-footer a:hover {
   text-decoration: underline;
+}
+.login-modal .form-footer .forgot-password {
+  display: block;
+  margin-top: 0.5rem;
 }
 
 @keyframes modalFadeIn {
@@ -1545,4 +1554,164 @@ main .newsletter__btn:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Shop Page Styles */
+.shop__container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.filters {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 1.5rem;
+  background-color: rgb(255, 248, 234);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.filters::-webkit-scrollbar {
+  width: 5px;
+}
+.filters::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.filters::-webkit-scrollbar-thumb {
+  background: #D4A373;
+  border-radius: 5px;
+}
+.filters .filters__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.filters .filters__header h2 {
+  font-size: 1.25rem;
+  color: hsl(24, 25%, 25%);
+}
+.filters .filters__header .clear-all {
+  color: #D4A373;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.filters .filters__header .clear-all:hover {
+  text-decoration: underline;
+}
+.filters .active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.filters .active-filters .filter-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid hsl(34, 35%, 85%);
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+.filters .active-filters .filter-tag .remove-tag {
+  background: none;
+  border: none;
+  color: hsl(24, 15%, 45%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.filters .active-filters .filter-tag .remove-tag:hover {
+  color: #D4A373;
+}
+.filters .filter-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsl(34, 35%, 85%);
+}
+.filters .filter-section:last-child {
+  border-bottom: none;
+}
+.filters .filter-section h3 {
+  font-size: 1rem;
+  color: hsl(24, 25%, 25%);
+  margin-bottom: 1rem;
+}
+.filters .filter-section .search-box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.filters .filter-section .search-box input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid hsl(34, 35%, 85%);
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+.filters .filter-section .search-box input:focus {
+  outline: none;
+  border-color: #D4A373;
+}
+.filters .filter-section .search-box i {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: hsl(33, 6%, 68%);
+}
+.filters .filter-section .filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.filters .filter-section .filter-options .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: hsl(24, 15%, 45%);
+}
+.filters .filter-section .filter-options .checkbox-label input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid hsl(34, 35%, 85%);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.filters .filter-section .filter-options .checkbox-label input[type=checkbox]:checked {
+  background-color: #D4A373;
+  border-color: #D4A373;
+}
+.filters .filter-section .filter-options .checkbox-label .color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(34, 35%, 85%);
+}
+.filters .filter-section .filter-options .checkbox-label .color-box.blue {
+  background-color: #4A90E2;
+}
+.filters .filter-section .filter-options .checkbox-label .count {
+  color: hsl(33, 6%, 68%);
+  margin-left: auto;
+}
+.filters .filter-section .show-more {
+  background: none;
+  border: none;
+  color: #D4A373;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+.filters .filter-section .show-more:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
