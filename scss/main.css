@@ -1397,9 +1397,13 @@ main .newsletter__btn:hover {
   border: solid 2px;
 }
 
+.showcase-section {
+  width: 95%;
+}
+
 .showcase__container {
   grid-template-columns: repeat(4, 1fr);
-  width: 95%;
+  width: 100%;
 }
 
 .showcase__wrapper .section__title {

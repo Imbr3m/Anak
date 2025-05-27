@@ -1652,10 +1652,13 @@ main {
 
 
 // SHOWCASE SECTION
+.showcase-section {
+  width: 95%;
+}
 .showcase__container {
   grid-template-columns: repeat(4, 1fr);
   // max-width: 1320px;
-  width: 95%;
+  width: 100%;
 }
 
 .showcase__wrapper .section__title {
